@@ -38,7 +38,7 @@ _Each `Event` should have a name, a total_cost, and a ticket_price. The total_co
 
 + `Event.all`
   + Returns an array of all `Event`s
-+ `Event#ticket_sales_needed_to_break_even`
++ `Event#tsales_to_break_even`
   + Returns the number of `Ticket`s that still need to be "purchased" for this `Event` before the `Event` reaches the break-even point. If the `Event` has sold enough `Ticket`s to break-even, return the number 0. 
 + `Event#attendees`
   + Returns an array of `Attendee`s that have `Ticket`s for the `Event`
