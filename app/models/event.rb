@@ -1,4 +1,48 @@
 class Event
+
+    attr_accessor :name, :total_cost, :ticket_price 
+
+    @@all = []
+
+    def initialize(name, total_cost, ticket_price)
+        @name = name 
+        @total_cost = total_cost
+        @ticket_price = ticket_price
+        @@all << self
+    end
+
+    def self.all 
+        @@all 
+    end
+
+    def tickets 
+        Ticket.all.select do |ticket|
+            ticket.event == self 
+        end
+    end
+
+    def sell_to_break_even
+        revenue = tickets.length * self.ticket_price
+        left_to_go = self.total_cost - revenue 
+        if left_to_go < 0 
+            return left_to_go
+        else 
+            return 0
+        end
+    end
+
+    def attendees
+        tickets.map do |ticket| 
+            ticket.attendee
+        end
+    end
+
+    def average_age
+        attendees.inject do |sum, attendee| 
+            sum + attendee.age 
+        end / attendees.length
+    end
+
 end
 
 # Event.all
