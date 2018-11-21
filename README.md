@@ -6,7 +6,7 @@ We can visualize the relationship of our models like this:
 
 Event >- Ticket -< Attendee
 
-When describing this relationship, we'd say an `Event` has many `Attendee`s through `Ticket`s and also that an `Attendee` has many `Events` through `Ticket`s. A `Ticket` belongs to an `Event` and an `Attendee.`
+When describing this relationship, we'd say an `Event` has many `Attendee`s through `Ticket`s and also that an `Attendee` has many `Event`s through `Ticket`s. A `Ticket` belongs to an `Event` and an `Attendee.`
 
 Without a `Ticket`, an `Event` would have no `Attendee`s, and vice-versa. The `Ticket` model, then, is our single source of truth in this relationship. Think about it from experience: when a ticket is created for you, it has the name of the `Attendee`, *you*, on it, as well as information about the `Event`. If we want to know who is going to be at the event, we would check each `Ticket` for its `Attendee` and make a list of all of them, and if you're an `Attendee` who wants information about the `Event`, you'd check the information on the `Ticket`. The `Ticket` is proof of both the connection between the `Event` and the `Attendee`. 
 
