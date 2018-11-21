@@ -1,6 +1,6 @@
 # Many-To-Many Relationships Review
 
-Let's say we're building an app to sell event tickets. Our app will need these three models: `Event`, `Ticket`, and `Attendee`.
+Let's say we're building an app to sell tickets for events. Our app will need these three models: `Event`, `Ticket`, and `Attendee`.
 
 We can visualize the relationship of our models like this:
 
@@ -9,8 +9,6 @@ Event >- Ticket -< Attendee
 When describing this relationship, we'd say an `Event` has many `Attendee`s through `Ticket`s and also that an `Attendee` has many `Event`s through `Ticket`s. A `Ticket` belongs to an `Event` and an `Attendee.`
 
 Without a `Ticket`, an `Event` would have no `Attendee`s, and vice-versa. The `Ticket` model, then, is our single source of truth in this relationship. Think about it from experience: when a ticket is created for you, it has the name of the `Attendee`, *you*, on it, as well as information about the `Event`. If we want to know who is going to be at the event, we would check each `Ticket` for its `Attendee` and make a list of all of them, and if you're an `Attendee` who wants information about the `Event`, you'd check the information on the `Ticket`. The `Ticket` is proof of both the connection between the `Event` and the `Attendee`. 
-
-A good way to know which model is your single source of truth is that it generally requires instances of two other models to be made before it can be created. In this example, a `Ticket` instance needs an `Event` and an `Attendee` before it can be created. 
 
 ## Topics
 
@@ -67,7 +65,7 @@ _Each `Attendee` should have a name and an age_
 
 ### `Venue`
 
-_Let's create another file in `app/models` for a new model that we'll call `Venue`. Make it so each `Venue` has a name, a location, and a rental_fee. When you create `Venue` instances, it'll be up to you to determine these attributes upon initiation. Then, build out the methods below. Go back into the file for the `Event` model and add an attribute that links each `Event` instance to a `Venue` instance. Draw out on a piece of paper how this new model looks in relation to the pre-existing model. Test your code in `tools/console.rb` to see if it works._
+Let's create another file in `app/models` for a new model that we'll call `Venue`. Make it so each `Venue` has a name, a location, and a rental_fee. When you create `Venue` instances, it'll be up to you to determine these attributes upon initiation. Then, build out the methods below. Go back into the file for the `Event` model and add an attribute that links each `Event` instance to a `Venue` instance. Draw out on a piece of paper how this new model looks in relation to the pre-existing model. Test your code in `tools/console.rb` to see if it works.
 
 + `Venue.all`
   + Returns an array of all `Venue`s
@@ -81,7 +79,7 @@ _Let's create another file in `app/models` for a new model that we'll call `Venu
 ## Bonus Method 
 
 + `Venue.guest_lists`
- + Returns an array of hashes for each `Event` being held at this particular `Venue`. Each hash will have the keys "name", and "guest_list", where "name" returns a string of the name of the `Event`, and "guest_list" returns an array of `Attendee`s attending that event. 
+  + Returns an array of hashes for each `Event` being held at this particular `Venue`. Each hash will have the keys "name", and "guest_list", where "name" returns a string of the name of the `Event`, and "guest_list" returns an array of `Attendee`s attending that event. 
 
 ### Other Bonus Methods 
 
