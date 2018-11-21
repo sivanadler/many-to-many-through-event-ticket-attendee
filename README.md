@@ -32,7 +32,7 @@ The files for each model have already been created for you in the `app/models` f
 
 ### `Event`
 
-_Each `Event` should have a name, a total_cost, and a ticket_price. The total_cost is the amount of money that has been spent on over-head costs and needs to be made back in ticket sales for the event to reach the break-even point and begin making profit. The ticket price is the amount each ticket is sold for. It's up to you to make up these attributes for each `Event` instance_
+Each `Event` should have a name, a total_cost, and a ticket_price. The total_cost is the amount of money that has been spent on over-head costs and needs to be made back in ticket sales for the event to reach the break-even point and begin making profit. The ticket price is the amount each ticket is sold for. It's up to you to make up these attributes for each `Event` instance
 
 + `Event.all`
   + Returns an array of all `Event`s
@@ -45,14 +45,14 @@ _Each `Event` should have a name, a total_cost, and a ticket_price. The total_co
 
 ### `Ticket`
 
-_A `Ticket` instance represents an `Attendee`'s purchase of a `Ticket` for an `Event`. All a ticket needs to be initiated is an `Attendee` and an `Event`_
+A `Ticket` instance represents an `Attendee`'s purchase of a `Ticket` for an `Event`. All a ticket needs to be initiated is an `Attendee` and an `Event`
 
 + `Ticket.all`
   + Returns an array of all Tickets
 
 ### `Attendee`
 
-_Each `Attendee` should have a name and an age_
+Each `Attendee` should have a name and an age
 
 + `Attendee.all`
   + Returns an array of all `Attendees`
