@@ -3,7 +3,7 @@ end
 
 # Event.all
   # Returns an array for all Events
-# Event#sell_to_break_even
+# Event#ticket_sales_needed_to_break_even
   # Returns the number of Tickets that still need to be "purchased" for this Event before the Event reaches the break-even point.
   # If the Event has sold enough Tickets to break-even, return the number 0. 
 # Event#attendees

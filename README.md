@@ -38,7 +38,7 @@ _Each `Event` should have a name, a total_cost, and a ticket_price. The total_co
 
 + `Event.all`
   + Returns an array of all `Event`s
-+ `Event#sell_to_break_even`
++ `Event#ticket_sales_needed_to_break_even`
   + Returns the number of `Ticket`s that still need to be "purchased" for this `Event` before the `Event` reaches the break-even point. If the `Event` has sold enough `Ticket`s to break-even, return the number 0. 
 + `Event#attendees`
   + Returns an array of `Attendee`s that have `Ticket`s for the `Event`
@@ -56,11 +56,9 @@ _A `Ticket` instance represents an `Attendee`'s purchase of a `Ticket` for an `E
 
 + `Attendee.all`
   + Returns an array of all `Attendees`
-+ `Attendee.all_events`
-  + Returns an array of all `Event`s that all `Attendee`s have tickets for. An `Event` instance should not appear multiple times. 
 + `Attendee#events`
   + Returns an array of all `Event`s that the `Attendee` is attending.
-+ `Attendee#money_spent_on_tickets`
++ `Attendee#money_spent`
   + Returns the dollar amount this `Attendee` has spent on `Tickets` for `Events`
 
 ## Bonus Model
