@@ -51,8 +51,6 @@ _A `Ticket` instance represents an `Attendee`'s purchase of a `Ticket` for an `E
 
 + `Ticket.all`
   + Returns an array of all Tickets
-+ `Ticket.price`
-  + Returns the dollar amount an `Attendee` paid for this `Ticket`
 
 ### `Attendee`
 
