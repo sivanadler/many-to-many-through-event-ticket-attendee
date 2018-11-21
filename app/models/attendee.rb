@@ -15,19 +15,19 @@ class Attendee
     end
 
     def tickets 
-        Ticket.select do |ticket|
+        Ticket.all.select do |ticket|
             ticket.attendee == self 
         end
     end
 
-    def all_events 
+    def events 
         tickets.map do |ticket|
             ticket.event 
         end
     end
 
-    def money_spent_on_tickets
-        all_events.inject do |sum, event|
+    def money_spent
+        events.inject(0) do |sum, event|
             sum + event.ticket_price
         end
     end

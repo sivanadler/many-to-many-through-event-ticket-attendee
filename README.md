@@ -60,11 +60,9 @@ _Each `Attendee` should have a name and an age_
 
 + `Attendee.all`
   + Returns an array of all `Attendees`
-+ `Attendee.all_events`
-  + Returns an array of all `Event`s that all `Attendee`s have tickets for. An `Event` instance should not appear multiple times. 
 + `Attendee#events`
   + Returns an array of all `Event`s that the `Attendee` is attending.
-+ `Attendee#money_spent_on_tickets`
++ `Attendee#money_spent`
   + Returns the dollar amount this `Attendee` has spent on `Tickets` for `Events`
 
 ## Bonus Model

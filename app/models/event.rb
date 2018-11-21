@@ -22,10 +22,10 @@ class Event
     end
 
     def sell_to_break_even
-        revenue = tickets.length * self.ticket_price
+        revenue = tickets.length * ticket_price
         left_to_go = self.total_cost - revenue 
-        if left_to_go < 0 
-            return left_to_go
+        if left_to_go > 0 
+            return left_to_go / ticket_price
         else 
             return 0
         end
@@ -38,9 +38,10 @@ class Event
     end
 
     def average_age
-        attendees.inject do |sum, attendee| 
-            sum + attendee.age 
-        end / attendees.length
+        age_sum = attendees.inject(0) do |sum, a| 
+            sum += a.age 
+        end 
+        age_sum / attendees.length
     end
 
 end
