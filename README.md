@@ -56,6 +56,8 @@ _A `Ticket` instance represents an `Attendee`'s purchase of a `Ticket` for an `E
 
 ### `Attendee`
 
+_Each `Attendee` should have a name and an age_
+
 + `Attendee.all`
   + Returns an array of all `Attendees`
 + `Attendee.all_events`
